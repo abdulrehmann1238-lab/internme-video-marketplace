@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-ivory: #FAF9F5;
+  --surface-white: #FFFFFF;
+  --brand-forest: #264A3B;
+  --brand-sage: #829887;
+  --surface-sage: #EAF0E9;
+  --text-charcoal: #252923;
+  --text-secondary: #74786F;
+  --surface-sand: #F0EDE5;
+  --border-sand: #E9E7DF;
+  --accent-gold: #B89B67;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF9F5;
+  color: #252923;
+}
+
+body {
+  background-color: #FAF9F5;
+  color: #252923;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/* Subtle editorial architectural grid backdrop inspired by refined print systems */
+.bg-editorial-grid {
+  background-image:
+    linear-gradient(to right, rgba(233, 231, 223, 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(233, 231, 223, 0.55) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Subtle studio paper grain lines without bright gradients */
+.bg-editorial-hairline {
+  background-image: linear-gradient(
+    to right,
+    rgba(233, 231, 223, 0.65) 1px,
+    transparent 1px
+  );
+  background-size: 25% 100%;
+}
+
+/* Accessible focus ring matching Deep Forest */
+*:focus-visible {
+  outline: 2px solid #264A3B;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D6CB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #829887;
+}
+
